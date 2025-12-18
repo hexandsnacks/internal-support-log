@@ -2,7 +2,7 @@
 
 A lightweight internal support logging tool built with Flask and SQLite.
 
-Designed to simulate an internal office tool used for logging, reviewing, and managing support issues. The project emphasizes clean routing, data persistence, and UI behavior driven by application state rather than page reload hacks.
+Designed to simulate an internal office tool used for logging, reviewing, and managing support issues. The project emphasizes clean routing, data persistence, and UI behavior driven by application state rather than page reload hacks. Demonstrates Git rebase conflict resolution and clean commit history.
 
 ## Features
 - Log internal support issues with summary, details, and timestamp
