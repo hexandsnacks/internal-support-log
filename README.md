@@ -27,3 +27,5 @@ This project was built as a practical demonstration of backend fundamentals:
 It mirrors the type of internal tooling commonly used in office, legal, or administrative environments.
 
 ## Setup
+Runs locally at:
+http://127.0.0.1:5000
