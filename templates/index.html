@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Internal Support Log</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Internal Support Log</h1>
+    <p>The system is online</p>
+
+    <h2>Submit an Issue</h2>
+
+    <form method="POST" action="/log">
+        <label>
+            Summary:<br>
+            <input type="text" name="summary" required>
+        </label>
+        <br><br>
+
+        <label>
+            Details:<br>
+            <textarea name="details" rows="4" cols="40" required></textarea>
+        </label>
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Logged Issues</h2>
+
+    {% if issues %}
+        <ul>
+            {% for issue in issues %}
+                <li>
+                   <strong>{{ issue["summary"] }}</strong><br>
+                   <em>{{ issue["timestamp"] }}</em><br>
+                   {{ issue["details"] }}<br><br>
+
+                   <form method="POST" action="delete/{{ issue['id'] }}">
+                    <button type="submit">Delete</button>
+                   </form>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No issues logged yet.</p>
+    {% endif %}
+</body>
+</html>
